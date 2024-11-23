@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Penghitung Konsumsi Energi</title>
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Penghitung Konsumsi Energi Rumah Tangga</h1>
+
+        <div class="form-group">
+            <label for="dayaRumah">Pilih Daya Listrik Rumah:</label>
+            <select id="dayaRumah">
+                <option value="1352">900VA (Rp. 1.352,00 per kWh)</option>
+                <option value="1444.7">1300VA (Rp. 1.444,70 per kWh)</option>
+                <option value="1444.7">2200VA (Rp. 1.444,70 per kWh)</option>
+                <option value="1699.53">3500-5500VA (Rp. 1.699,53 per kWh)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="perangkat">Pilih Jenis Perangkat:</label>
+            <select id="perangkat" onchange="tampilkanSaranWatt()">
+                <option value="Lampu">Lampu</option>
+                <option value="Kulkas">Kulkas</option>
+                <option value="AC">AC</option>
+                <option value="Dispenser">Dispenser</option>
+                <option value="Mesin Cuci">Mesin Cuci</option>
+                <option value="Setrika">Setrika</option>
+                <option value="Rice Cooker">Rice Cooker</option>
+                <option value="Charger">Charger</option>
+                <option value="Lainnya">Perangkat Lainnya</option> <!-- Opsi baru -->
+            </select>
+            <p id="saranWatt"></p>
+        </div>
+        <div class="form-group" id="inputPerangkatLainnya" style="display: none;"> <!-- Input tersembunyi -->
+            <label for="namaPerangkatLainnya">Nama Perangkat Lainnya:</label>
+            <input type="text" id="namaPerangkatLainnya" placeholder="Masukkan nama perangkat">
+        </div>
+        
+        <div class="form-group">
+            <label for="daya">Daya Perangkat (watt):</label>
+            <input type="number" id="daya" placeholder="Masukkan daya perangkat dalam watt">
+        </div>
+        <div class="form-group">
+            <label for="jumlah">Jumlah Perangkat:</label>
+            <input type="number" id="jumlah" placeholder="Masukkan jumlah perangkat">
+        </div>
+        <div class="form-group">
+            <label for="durasi">Durasi Pemakaian (jam per hari):</label>
+            <input type="number" id="durasi" placeholder="Masukkan durasi penggunaan per hari">
+        </div>
+        <button onclick="tambahPerangkat()">Tambahkan Perangkat</button>
+        <button onclick="hitungEnergi()">Hitung Konsumsi Energi</button>
+
+        <div class="device-list" id="deviceList">
+            <!-- Daftar perangkat akan ditampilkan di sini -->
+        </div>
+
+        <div class="result" id="result">
+            <!-- Hasil perhitungan akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

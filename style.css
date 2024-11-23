@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+h1 {
+    text-align: center;
+    color: #76c7c0; /* Teal color */
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    font-size: 16px;
+    color: #bbbbbb; /* Softer label color */
+}
+input, select {
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #555555; /* Darker border */
+    background-color: #1e1e1e; /* Darker input background */
+    color: #e0e0e0; /* Light text */
+    border-radius: 5px; /* Slightly rounded edges */
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #76c7c0; /* Highlight border on focus */
+    box-shadow: 0 0 5px #76c7c0;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #76c7c0; /* Teal button */
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px; /* Rounded edges for buttons */
+}
+button:hover {
+    background-color: #68b1b0; /* Slightly darker teal on hover */
+}
+.result, .device-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background for results */
+    border-radius: 5px;
+    font-size: 18px;
+    color: #e0e0e0; /* Light text */
+}
+.device-item {
+    padding: 10px;
+    background-color: #2a2a2a; /* Slightly lighter background for devices */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Light text */
+}
