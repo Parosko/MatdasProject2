@@ -3,12 +3,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 20px;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text */
+    background-color: #020817; /* Almost black navy background */
+    color: #ffffff; /* Dim light gray-blue text */
 }
 h1 {
     text-align: center;
-    color: #76c7c0; /* Teal color */
+    color: #dadada; /* Muted dark steel blue for headers */
 }
 .container {
     width: 80%;
@@ -20,28 +20,28 @@ h1 {
 label {
     display: block;
     font-size: 16px;
-    color: #bbbbbb; /* Softer label color */
+    color: #798295; /* Soft, dark blue-gray for labels */
 }
 input, select {
     padding: 8px;
     width: 100%;
     font-size: 16px;
     margin-top: 5px;
-    border: 1px solid #555555; /* Darker border */
-    background-color: #1e1e1e; /* Darker input background */
-    color: #e0e0e0; /* Light text */
+    border: 1px solid #0f172a; /* Dark navy border */
+    background-color: #0b1324; /* Very dark navy input background */
+    color: #b0b3b8; /* Dim light gray-blue text */
     border-radius: 5px; /* Slightly rounded edges */
 }
 input:focus, select:focus {
     outline: none;
-    border-color: #76c7c0; /* Highlight border on focus */
-    box-shadow: 0 0 5px #76c7c0;
+    border-color: #314e6e; /* Muted dark steel blue border on focus */
+    box-shadow: 0 0 5px #314e6e;
 }
 button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #76c7c0; /* Teal button */
+    background-color: #253a52; /* Very dark blue button */
     border: none;
     cursor: pointer;
     width: 100%;
@@ -49,20 +49,20 @@ button {
     border-radius: 5px; /* Rounded edges for buttons */
 }
 button:hover {
-    background-color: #68b1b0; /* Slightly darker teal on hover */
+    background-color: #1d2f45; /* Even darker navy blue on hover */
 }
 .result, .device-list {
     margin-top: 20px;
     padding: 20px;
-    background-color: #1e1e1e; /* Dark background for results */
+    background-color: #0b1324; /* Very dark navy background for results */
     border-radius: 5px;
     font-size: 18px;
-    color: #e0e0e0; /* Light text */
+    color: #b0b3b8; /* Dim light gray-blue text */
 }
 .device-item {
     padding: 10px;
-    background-color: #2a2a2a; /* Slightly lighter background for devices */
+    background-color: #0f1b33; /* Slightly lighter very dark navy for devices */
     border-radius: 5px;
     margin-bottom: 10px;
-    color: #e0e0e0; /* Light text */
+    color: #b0b3b8; /* Dim light gray-blue text */
 }
