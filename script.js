@@ -14,12 +14,11 @@ function tampilkanSaranWatt() {
     const perangkat = document.getElementById('perangkat').value;
     const saran = saranWattPerangkat[perangkat];
     const inputPerangkatLainnya = document.getElementById('inputPerangkatLainnya');
-
     if (perangkat === "Lainnya") {
-        inputPerangkatLainnya.style.display = "block"; // Tampilkan input untuk perangkat lainnya
+        inputPerangkatLainnya.style.display = "block";
         document.getElementById('saranWatt').textContent = "Masukkan nama perangkat dan watt-nya.";
     } else {
-        inputPerangkatLainnya.style.display = "none"; // Sembunyikan input lainnya
+        inputPerangkatLainnya.style.display = "none";
         document.getElementById('saranWatt').textContent = saran ? `Watt umum untuk perangkat ini: ${saran}` : "";
     }
 }
@@ -29,14 +28,12 @@ function tambahPerangkat() {
     if (jenis === "Lainnya") {
         jenis = document.getElementById('namaPerangkatLainnya').value || "Perangkat Tidak Diketahui";
     }
-
     const daya = parseFloat(document.getElementById('daya').value) || 0;
     const jumlah = parseInt(document.getElementById('jumlah').value) || 0;
     const durasi = parseFloat(document.getElementById('durasi').value) || 0;
 
     if (daya > 0 && jumlah > 0 && durasi > 0 && jenis.trim() !== "") {
         perangkatList.push({ jenis, daya, jumlah, durasi });
-
         const deviceListDiv = document.getElementById('deviceList');
         const deviceItem = document.createElement('div');
         deviceItem.className = 'device-item';
@@ -47,12 +44,11 @@ function tambahPerangkat() {
             Durasi: ${durasi} jam/hari
         `;
         deviceListDiv.appendChild(deviceItem);
-
         document.getElementById('daya').value = '';
         document.getElementById('jumlah').value = '';
         document.getElementById('durasi').value = '';
-        document.getElementById('namaPerangkatLainnya').value = ''; // Reset input lainnya
-        document.getElementById('inputPerangkatLainnya').style.display = 'none'; // Sembunyikan input lainnya
+        document.getElementById('namaPerangkatLainnya').value = '';
+        document.getElementById('inputPerangkatLainnya').style.display = 'none';
     } else {
         alert('Harap masukkan semua data dengan benar.');
     }
